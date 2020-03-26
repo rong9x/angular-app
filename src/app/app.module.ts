@@ -31,6 +31,14 @@ export class Throttle {
         resolve: {
           Throttle
         }
+      },
+      {
+        path: 'edra',
+        loadChildren: () => import('./edra/edra.module').then(m => m.EdraModule),
+        // Introduced for an artificial delay
+        resolve: {
+          Throttle
+        }
       }
     ])
   ],
